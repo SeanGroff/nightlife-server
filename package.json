@@ -1,0 +1,47 @@
+{
+  "name": "nightlife-server",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Nightlife Project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "NODE_ENV=production node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanGroff/nightlife-server.git"
+  },
+  "author": "Sean Groff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SeanGroff/nightlife-server/issues"
+  },
+  "homepage": "https://github.com/SeanGroff/nightlife-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.15",
+    "mongoose-mongodb-errors": "^0.0.2",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-imports": "^1.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.12.1",
+    "prettier-eslint": "^8.8.1"
+  }
+}
