@@ -5,8 +5,10 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "NODE_ENV=production node app.js"
+    "start": "NODE_ENV=production node app.js",
+    "lint": "eslint ."
   },
+  "pre-commit": ["lint"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SeanGroff/nightlife-server.git"
@@ -28,8 +30,7 @@
     "mongoose-mongodb-errors": "^0.0.2",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0",
-    "validator": "^9.4.1"
+    "passport-google-oauth20": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -41,6 +42,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "nodemon": "^1.17.3",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.12.1",
     "prettier-eslint": "^8.8.1"
   }

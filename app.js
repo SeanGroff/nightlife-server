@@ -9,6 +9,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const config = require('./config');
+const authRoutes = require('./routes/authRoutes');
+
+require('./handlers/passport');
 
 const app = express();
 
@@ -18,6 +21,8 @@ mongoose
   .connect(config.database)
   .then(() => console.log('Successfully connected to DB!'))
   .catch(err => console.log(`Error connecting to DB: ${err}`));
+
+app.use(cors());
 
 app.use(
   session({
@@ -30,9 +35,9 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use('/auth', authRoutes);
 app.use((err, req, res, next) => {
   console.log('====== ERROR =======');
   console.error(err.stack);

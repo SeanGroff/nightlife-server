@@ -2,7 +2,7 @@
   "root": true,
   "parserOptions": {
     "parser": "babel-eslint",
-    "ecmaVersion": 6,
+    "ecmaVersion": 8,
     "sourceType": "module"
   },
   "env": {
