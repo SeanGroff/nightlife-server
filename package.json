@@ -8,7 +8,9 @@
     "start": "NODE_ENV=production node app.js",
     "lint": "eslint ."
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SeanGroff/nightlife-server.git"
@@ -26,6 +28,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.15",
     "mongoose-mongodb-errors": "^0.0.2",
     "morgan": "^1.9.0",
